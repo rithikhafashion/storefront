@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Storefront</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <title>RF Store</title>
+  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 </head>
 <body>
   <h1>Rithikha Fashion</h1>
@@ -11,7 +11,7 @@
   <div class="product-grid">
   {% for product in collections.products %}
     <div class="product-card">
-      <img src="{{ product.data.image }}" alt="{{ product.data.title }}" onclick="showImage('{{ product.data.image }}')">
+      <img src="{{ product.data.image | url }}" alt="{{ product.data.title }}" onclick="showImage('{{ product.data.image | url}}')">
       <h2>{{ product.data.title }}</h2>
       <p>{{ product.data.price }}</p>
     </div>

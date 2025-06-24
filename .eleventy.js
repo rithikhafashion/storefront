@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
 
 
   return {
+    pathPrefix: "/storefront/",
     dir: {
       input: "src",
       output: "output"
