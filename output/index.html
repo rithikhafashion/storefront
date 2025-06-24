@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Storefront</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Rithikha Fashion</h1>
+
+  <div class="product-grid">
+  
+    <div class="product-card">
+      <img src="/images/saree.jpg" alt="Elegant Silk Saree" onclick="showImage('/images/saree.jpg')">
+      <h2>Elegant Silk Saree</h2>
+      <p>₹2,499</p>
+    </div>
+  
+    <div class="product-card">
+      <img src="/images/kurthi.jpg" alt="Stylish Kurthi" onclick="showImage('/images/kurthi.jpg')">
+      <h2>Stylish Kurthi</h2>
+      <p>₹999</p>
+    </div>
+  
+    <div class="product-card">
+      <img src="/images/leggings.jpg" alt="Leggings" onclick="showImage('/images/leggings.jpg')">
+      <h2>Leggings</h2>
+      <p>₹499</p>
+    </div>
+  
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal" onclick="hideImage()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+</body>
+</html>
+
+<script>
+function showImage(src) {
+  document.getElementById('imageModal').style.display = 'flex';
+  document.getElementById('modalImg').src = src;
+}
+
+function hideImage() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') hideImage();
+});
+
+</script>
