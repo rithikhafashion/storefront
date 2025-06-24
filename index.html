@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Storefront</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <title>RF Store</title>
+  <link rel="stylesheet" href="/storefront/css/styles.css">
 </head>
 <body>
   <h1>Rithikha Fashion</h1>
 
   <div class="product-grid">
-  {% for product in collections.products %}
+  
     <div class="product-card">
-      <img src="{{ product.data.image }}" alt="{{ product.data.title }}" onclick="showImage('{{ product.data.image }}')">
-      <h2>{{ product.data.title }}</h2>
-      <p>{{ product.data.price }}</p>
+      <img src="/storefront/images/kurthi.jpg" alt="Stylish Kurthi" onclick="showImage('/storefront/images/kurthi.jpg')">
+      <h2>Stylish Kurthi</h2>
+      <p>₹999</p>
     </div>
-  {% endfor %}
+  
+    <div class="product-card">
+      <img src="/storefront/images/leggings.jpg" alt="Leggings" onclick="showImage('/storefront/images/leggings.jpg')">
+      <h2>Leggings</h2>
+      <p>₹499</p>
+    </div>
+  
+    <div class="product-card">
+      <img src="/storefront/images/saree.jpg" alt="Elegant Silk Saree" onclick="showImage('/storefront/images/saree.jpg')">
+      <h2>Elegant Silk Saree</h2>
+      <p>₹2,499</p>
+    </div>
+  
 </div>
 
 <!-- Image Modal -->
