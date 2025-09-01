@@ -1,45 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>RF Store</title>
-  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
-</head>
-<body>
-  <h1>Rithikha Fashion</h1>
-
-  <div class="product-grid">
-  {% for product in collections.products %}
-    <div class="product-card">
-      <img src="{{ product.data.image | url }}" alt="{{ product.data.title }}" onclick="showImage('{{ product.data.image | url}}')">
-      <h2>{{ product.data.title }}</h2>
-      <p>{{ product.data.price }}</p>
+---
+layout: base.njk
+title: Rithikha Fashion - Elegant Sarees Collection
+---
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Elegant Saree Collection</h1>
+      <p>Discover timeless beauty in our handpicked collection</p>
+      <a href="#women" class="cta-button">Shop Now</a>
     </div>
-  {% endfor %}
-</div>
+  </section>
 
-<!-- Image Modal -->
-<div id="imageModal" class="modal" onclick="hideImage()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
+  <!-- PRODUCTS -->
+  <section class="products" id="women">
+    <!-- div class="filters">
+      <input type="text" placeholder="Search sarees..." class="search-bar" id="search-bar">
+      <button class="filter-button active">All</button>
+      <button class="filter-button">Silk Sarees</button>
+      <button class="filter-button">Cotton Sarees</button>
+      <button class="filter-button">Designer Sarees</button>
+      <button class="filter-button">Wedding Collection</button>
+    </div -->
 
+    <div class="products-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="{{ '/images/saree1.jpg' | url }}" alt="Pink Silk Saree" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">Pink Silk Saree with Zari Work</h3>
+          <p class="product-price">₹8,995</p>
+        </div>
+      </div>
 
-</body>
-</html>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="{{ '/images/saree2.jpg' | url }}" alt="Green Designer Saree" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">Green Designer Saree with Embroidery</h3>
+          <p class="product-price">₹11,995</p>
+        </div>
+      </div>
 
-<script>
-function showImage(src) {
-  document.getElementById('imageModal').style.display = 'flex';
-  document.getElementById('modalImg').src = src;
-}
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="{{ '/images/saree3.jpg' | url }}" alt="Traditional Cotton Saree" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">Traditional Cotton Saree</h3>
+          <p class="product-price">₹4,995</p>
+        </div>
+      </div>
 
-function hideImage() {
-  document.getElementById('imageModal').style.display = 'none';
-}
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="{{ '/images/saree4.jpg' | url }}" alt="Wedding Collection Saree" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">Bridal Collection Red Silk Saree</h3>
+          <p class="product-price">₹15,995</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') hideImage();
-});
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2>About Rithikha Fashion</h2>
+      <p>Rithikha Fashion is Sangagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials.</p>
+      <div class="about-features">
+        <div class="feature">
+          <h3>Elegant Collection</h3>
+          <p>Handpicked designs that blend tradition with contemporary style</p>
+        </div>
+        <div class="feature">
+          <h3>Affordable Luxury</h3>
+          <p>Quality fashion at prices that make style accessible to everyone</p>
+        </div>
+        <div class="feature">
+          <h3>Local Heritage</h3>
+          <p>Proudly serving Sangagiri with the finest women's wear</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</script>

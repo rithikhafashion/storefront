@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Kurthi</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav-container">
+      <div class="logo">Rithikha Fashion</div>
+
+      <!-- Hamburger Menu -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="/">Home</a>
+        <div class="nav-item">
+          <a href="#women">Women</a>
+          <div class="dropdown">
+            <a href="/saree/">Sarees</a>
+            <a href="/kurthi/">Kurthis</a>
+            <a href="/nighties/">Nighties</a>
+          </div>
+        </div>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    
+<div class="product-detail">
+    <div class="product-images">
+        <div class="main-image-container">
+            <img src="/images/kurthi.jpg" 
+                 alt="Stylish Kurthi" 
+                 class="main-image" 
+                 id="mainImage">
+        </div>
+        
+        <div class="thumbnail-gallery">
+            
+            <img src="/images/kurthi.jpg" 
+                 alt="Stylish Kurthi view 1" 
+                 class="thumbnail"
+                 onclick="updateMainImage(this.src)">
+            
+        </div>
+        
+    </div>
+
+    <div class="product-info">
+        <h1 class="product-title">Stylish Kurthi</h1>
+        <p class="product-price">₹999</p>
+        
+        
+        <div class="product-description">
+            Trendy kurthi with comfortable fabric for daily wear.
+Perfect blend of style and comfort for modern women.
+
+        </div>
+        
+
+        
+        <div class="product-specs">
+            <h3>Product Details</h3>
+            <ul class="specs-list">
+                
+                <li>
+                    <span class="spec-label">Material:</span>
+                    <span class="spec-value">Cotton Blend</span>
+                </li>
+                
+                <li>
+                    <span class="spec-label">Pattern:</span>
+                    <span class="spec-value">Printed</span>
+                </li>
+                
+                <li>
+                    <span class="spec-label">Sleeve:</span>
+                    <span class="spec-value">3/4th Sleeve</span>
+                </li>
+                
+                <li>
+                    <span class="spec-label">Neck:</span>
+                    <span class="spec-value">Round Neck</span>
+                </li>
+                
+                <li>
+                    <span class="spec-label">Occasion:</span>
+                    <span class="spec-value">Casual, Office Wear</span>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="product-actions">
+            
+            <div class="variant-selector">
+                <label for="variant">Select Option:</label>
+                <select id="variant" name="variant">
+                    
+                    <option value="s">Small</option>
+                    
+                    <option value="m">Medium</option>
+                    
+                    <option value="l">Large</option>
+                    
+                    <option value="xl">X-Large</option>
+                    
+                </select>
+            </div>
+            
+
+            <div class="quantity-selector">
+                <label for="quantity">Quantity:</label>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(-1)" class="quantity-btn">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="15">
+                    <button onclick="updateQuantity(1)" class="quantity-btn">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart" 
+                    >
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<section class="related-products">
+    <h2>You May Also Like</h2>
+    <div class="products-grid">
+        
+            
+        
+            
+            <div class="product-card">
+                <img src="/images/leggings.jpg" alt="Comfort-fit Leggings">
+                <div class="product-info">
+                    <h3>Comfort-fit Leggings</h3>
+                    <p class="price">₹499</p>
+                    <a href="/products/leggings/" class="view-details">View Details</a>
+                </div>
+            </div>
+            
+        
+            
+            <div class="product-card">
+                <img src="/images/saree.jpg" alt="Elegant Silk Saree">
+                <div class="product-info">
+                    <h3>Elegant Silk Saree</h3>
+                    <p class="price">₹2499</p>
+                    <a href="/products/saree/" class="view-details">View Details</a>
+                </div>
+            </div>
+            
+        
+            
+            <div class="product-card">
+                <img src="/images/saree1.jpg" alt="Pink Silk Saree with Zari Work">
+                <div class="product-info">
+                    <h3>Pink Silk Saree with Zari Work</h3>
+                    <p class="price">₹8995</p>
+                    <a href="/products/pink-silk-saree/" class="view-details">View Details</a>
+                </div>
+            </div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+
+<style>
+.product-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.main-image-container {
+    margin-bottom: 1rem;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.thumbnail-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.thumbnail:hover {
+    opacity: 0.8;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.product-specs {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-list li {
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.specs-list li:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.product-actions {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.variant-selector select,
+.quantity-controls input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quantity-controls input {
+    width: 60px;
+    text-align: center;
+}
+
+.add-to-cart {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover:not([disabled]) {
+    background: #4a148c;
+}
+
+.add-to-cart[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.related-products {
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.related-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+function updateMainImage(src) {
+    document.getElementById('mainImage').src = src;
+}
+
+function updateQuantity(change) {
+    const input = document.getElementById('quantity');
+    const newValue = parseInt(input.value) + change;
+    if (newValue >= 1 && newValue <= parseInt(input.max)) {
+        input.value = newValue;
+    }
+}
+</script>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Rithikha Fashion is SanKagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#new-arrivals">New Arrivals</a></li>
+          <li><a href="#best-sellers">Best Sellers</a></li>
+          <li><a href="#offers">Special Offers</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: rithikhafashion@gmail.com</li>
+          <li>Phone: +91 89032 99373</li>
+          <li>Address: Near New Bus Stand, Akkammapettai, SanKagiri, Tamil Nadu 637301</li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/scripts/main.js"></script>
+</body>
+</html>

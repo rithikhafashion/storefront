@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Kurthis Collection - Rithikha Fashion
+permalink: "/kurthi/"
+---
+
+<section class="page-header text-center">
+    <h1 class="page-title">Kurthis Collection</h1>
+    <p class="page-subtitle">Discover our trendy and comfortable kurthis for every occasion</p>
+</section>
+
+<div class="product-grid">
+    {% for product in collections.products %}
+        {% if product.data.category == "kurthi" %}
+        <div class="product-card">
+            <div class="product-image">
+                <img src="{{ product.data.mainImage | url }}" alt="{{ product.data.title }}">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">{{ product.data.title }}</h2>
+                <p class="product-price">₹{{ product.data.price }}</p>
+                <a href="{{ product.url }}" class="btn-primary">View Details</a>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<style>
+.page-header {
+    text-align: center;
+    padding: 2rem 0;
+    background: #f5f5f5;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    color: #666;
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #6200ea;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #6200ea;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #3700b3;
+}
+</style>

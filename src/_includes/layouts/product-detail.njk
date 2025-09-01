@@ -1,0 +1,235 @@
+---
+layout: base.njk
+---
+
+<div class="product-detail">
+    <div class="product-images">
+        <div class="main-image-container">
+            <img src="{{ product.mainImage }}" 
+                 alt="{{ product.title }}" 
+                 class="main-image" 
+                 id="mainImage">
+        </div>
+        {% if product.images %}
+        <div class="thumbnail-gallery">
+            {% for image in product.images %}
+            <img src="{{ image }}" 
+                 alt="{{ product.title }} view {{ loop.index }}" 
+                 class="thumbnail"
+                 onclick="updateMainImage(this.src)">
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="product-info">
+        <h1 class="product-title">{{ product.title }}</h1>
+        <p class="product-price">₹{{ product.price }}</p>
+        
+        {% if product.description %}
+        <div class="product-description">
+            {{ product.description | safe }}
+        </div>
+        {% endif %}
+
+        {% if product.details %}
+        <div class="product-specs">
+            <h3>Product Details</h3>
+            <ul class="specs-list">
+                {% for detail in product.details %}
+                <li>
+                    <span class="spec-label">{{ detail.label }}:</span>
+                    <span class="spec-value">{{ detail.value }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="product-actions">
+            {% if product.variants %}
+            <div class="variant-selector">
+                <label for="variant">Select Option:</label>
+                <select id="variant" name="variant">
+                    {% for variant in product.variants %}
+                    <option value="{{ variant.id }}">{{ variant.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
+
+            <div class="quantity-selector">
+                <label for="quantity">Quantity:</label>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(-1)" class="quantity-btn">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="{{ product.stock | default(10) }}">
+                    <button onclick="updateQuantity(1)" class="quantity-btn">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart" 
+                    {% if not product.inStock %}disabled{% endif %}>
+                {% if product.inStock %}Add to Cart{% else %}Out of Stock{% endif %}
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+.product-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.main-image-container {
+    margin-bottom: 1rem;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.thumbnail-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.thumbnail:hover {
+    opacity: 0.8;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #6200ea;
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #666;
+    white-space: pre-wrap;
+}
+
+.product-specs {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-list li {
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.specs-list li:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.product-actions {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.variant-selector select,
+.quantity-controls input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quantity-controls input {
+    width: 60px;
+    text-align: center;
+}
+
+.add-to-cart {
+    background: #6200ea;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover:not([disabled]) {
+    background: #3700b3;
+}
+
+.add-to-cart[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+</style>
+
+<script>
+function updateMainImage(src) {
+    document.getElementById('mainImage').src = src;
+}
+
+function updateQuantity(change) {
+    const input = document.getElementById('quantity');
+    const newValue = parseInt(input.value) + change;
+    if (newValue >= 1 && newValue <= parseInt(input.max)) {
+        input.value = newValue;
+    }
+}
+</script>

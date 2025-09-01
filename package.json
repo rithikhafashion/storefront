@@ -1,25 +1,21 @@
 {
-  "name": "eleventy-storefront",
+  "name": "rf11",
   "version": "1.0.0",
-  "description": "Static Storefront with Eleventy",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx eleventy --serve",
-    "build": "npx eleventy"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rithikhafashion/storefront.git"
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/rithikhafashion/storefront/issues"
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
   },
-  "homepage": "https://github.com/rithikhafashion/storefront#readme"
+  "dependencies": {
+    "luxon": "^3.7.1"
+  }
 }
