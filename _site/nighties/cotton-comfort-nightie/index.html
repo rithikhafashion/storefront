@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comfortable pure cotton nightwear with elegant floral prints. 
+Perfect for a good night&#39;s sleep with breathable fabric and relaxed fit.
+">
+  <meta name="keywords" content="sarees, kurthis, nighties, women's wear, fashion, traditional wear, Indian fashion">
+  <meta name="author" content="Rithikha Fashion">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Cotton Comfort Nightie">
+  <meta property="og:description" content="Comfortable pure cotton nightwear with elegant floral prints. 
+Perfect for a good night&#39;s sleep with breathable fabric and relaxed fit.
+">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/nighties/cotton-comfort-nightie/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
   <title>Cotton Comfort Nightie</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="/styles/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
 <body>
   <!-- HEADER -->
   <header>
     <nav class="nav-container">
-      <div class="logo">Rithikha Fashion</div>
+      <div class="logo">
+        <i class="fas fa-tshirt"></i>
+        Rithikha Fashion
+      </div>
 
       <!-- Hamburger Menu -->
       <div class="menu-toggle" id="menu-toggle">
@@ -19,17 +48,38 @@
       </div>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="/">Home</a>
+        <a href="/" class="nav-link">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
         <div class="nav-item">
-          <a href="#women">Women</a>
+          <a href="#women" class="nav-link">
+            <i class="fas fa-female"></i>
+            Women
+          </a>
           <div class="dropdown">
-            <a href="/saree/">Sarees</a>
-            <a href="/kurthi/">Kurthis</a>
-            <a href="/nighties/">Nighties</a>
+            <a href="/saree/">
+              <i class="fas fa-scarf"></i>
+              Sarees
+            </a>
+            <a href="/kurthi/">
+              <i class="fas fa-tshirt"></i>
+              Kurthis
+            </a>
+            <a href="/nighties/">
+              <i class="fas fa-moon"></i>
+              Nighties
+            </a>
           </div>
         </div>
-        <a href="/#about">About</a>
-        <a href="/#contact">Contact</a>
+        <a href="/#about" class="nav-link">
+          <i class="fas fa-info-circle"></i>
+          About
+        </a>
+        <a href="/#contact" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          Contact
+        </a>
       </div>
     </nav>
   </header>
@@ -238,38 +288,65 @@ function updateQuantity(change) {
   </main>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="contact">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>About Us</h3>
-        <p>Rithikha Fashion is SanKagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials.</p>
+        <h3>
+          <i class="fas fa-store"></i>
+          About Us
+        </h3>
+        <p>Rithikha Fashion is SanKagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials. We bring you the finest collection with quality and style.</p>
       </div>
       <div class="footer-section">
-        <h3>Quick Links</h3>
+        <h3>
+          <i class="fas fa-link"></i>
+          Quick Links
+        </h3>
         <ul>
-          <li><a href="#women">Women</a></li>
-          <li><a href="#new-arrivals">New Arrivals</a></li>
-          <li><a href="#best-sellers">Best Sellers</a></li>
-          <li><a href="#offers">Special Offers</a></li>
+          <li><a href="#women"><i class="fas fa-chevron-right"></i> Women's Collection</a></li>
+          <li><a href="/saree/"><i class="fas fa-chevron-right"></i> Sarees</a></li>
+          <li><a href="/kurthi/"><i class="fas fa-chevron-right"></i> Kurthis</a></li>
+          <li><a href="/nighties/"><i class="fas fa-chevron-right"></i> Nighties</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Contact Us</h3>
+        <h3>
+          <i class="fas fa-address-card"></i>
+          Contact Us
+        </h3>
         <ul>
-          <li>Email: rithikhafashion@gmail.com</li>
-          <li>Phone: +91 89032 99373</li>
-          <li>Address: Near New Bus Stand, Akkammapettai, SanKagiri, Tamil Nadu 637301</li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:rithikhafashion@gmail.com">rithikhafashion@gmail.com</a>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+918903299373">+91 89032 99373</a>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            Near New Bus Stand, Akkammapettai, SanKagiri, Tamil Nadu 637301
+          </li>
         </ul>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Rithikha Fashion. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- JS -->
+  <!-- JavaScript -->
   <script src="/scripts/main.js"></script>
 </body>
 </html>

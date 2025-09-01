@@ -1,85 +1,254 @@
 ---
 layout: base.njk
-title: Rithikha Fashion - Elegant Sarees Collection
+title: Rithikha Fashion - Elegant Women's Wear Collection
+description: Discover timeless beauty in our handpicked collection of sarees, kurthis, and nighties. Quality fashion at affordable prices.
 ---
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Elegant Saree Collection</h1>
-      <p>Discover timeless beauty in our handpicked collection</p>
-      <a href="#women" class="cta-button">Shop Now</a>
-    </div>
-  </section>
 
-  <!-- PRODUCTS -->
-  <section class="products" id="women">
-    <!-- div class="filters">
-      <input type="text" placeholder="Search sarees..." class="search-bar" id="search-bar">
-      <button class="filter-button active">All</button>
-      <button class="filter-button">Silk Sarees</button>
-      <button class="filter-button">Cotton Sarees</button>
-      <button class="filter-button">Designer Sarees</button>
-      <button class="filter-button">Wedding Collection</button>
-    </div -->
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Elegant Women's Wear Collection</h1>
+    <p>Discover timeless beauty in our handpicked collection of sarees, kurthis, and nighties. Quality fashion at affordable prices.</p>
+    <a href="#women" class="cta-button">
+      <i class="fas fa-shopping-bag"></i>
+      Explore Collection
+    </a>
+  </div>
+</section>
 
-    <div class="products-grid">
-      <!-- Product Card 1 -->
-      <div class="product-card">
-        <img src="{{ '/images/saree1.jpg' | url }}" alt="Pink Silk Saree" class="product-image">
-        <div class="product-info">
-          <h3 class="product-title">Pink Silk Saree with Zari Work</h3>
-          <p class="product-price">₹8,995</p>
-        </div>
-      </div>
+<!-- FEATURED PRODUCTS -->
+<section class="products" id="women">
+  <div class="section-header">
+    <h2>Featured Collection</h2>
+    <p>Handpicked designs that blend tradition with contemporary style</p>
+  </div>
 
-      <!-- Product Card 2 -->
-      <div class="product-card">
-        <img src="{{ '/images/saree2.jpg' | url }}" alt="Green Designer Saree" class="product-image">
-        <div class="product-info">
-          <h3 class="product-title">Green Designer Saree with Embroidery</h3>
-          <p class="product-price">₹11,995</p>
-        </div>
-      </div>
-
-      <!-- Product Card 3 -->
-      <div class="product-card">
-        <img src="{{ '/images/saree3.jpg' | url }}" alt="Traditional Cotton Saree" class="product-image">
-        <div class="product-info">
-          <h3 class="product-title">Traditional Cotton Saree</h3>
-          <p class="product-price">₹4,995</p>
-        </div>
-      </div>
-
-      <!-- Product Card 4 -->
-      <div class="product-card">
-        <img src="{{ '/images/saree4.jpg' | url }}" alt="Wedding Collection Saree" class="product-image">
-        <div class="product-info">
-          <h3 class="product-title">Bridal Collection Red Silk Saree</h3>
-          <p class="product-price">₹15,995</p>
+  <div class="products-grid">
+    <!-- Saree Card 1 -->
+    <div class="product-card">
+      <img src="{{ '/images/saree1.jpg' | url }}" alt="Pink Silk Saree with Zari Work" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Pink Silk Saree with Zari Work</h3>
+        <p class="product-price">₹8,995</p>
+        <div class="product-badges">
+          <span class="badge badge-featured">Featured</span>
+          <span class="badge badge-new">New</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about-section">
-    <div class="about-content">
-      <h2>About Rithikha Fashion</h2>
-      <p>Rithikha Fashion is Sangagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials.</p>
-      <div class="about-features">
-        <div class="feature">
-          <h3>Elegant Collection</h3>
-          <p>Handpicked designs that blend tradition with contemporary style</p>
-        </div>
-        <div class="feature">
-          <h3>Affordable Luxury</h3>
-          <p>Quality fashion at prices that make style accessible to everyone</p>
-        </div>
-        <div class="feature">
-          <h3>Local Heritage</h3>
-          <p>Proudly serving Sangagiri with the finest women's wear</p>
+    <!-- Saree Card 2 -->
+    <div class="product-card">
+      <img src="{{ '/images/saree2.jpg' | url }}" alt="Green Designer Saree with Embroidery" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Green Designer Saree with Embroidery</h3>
+        <p class="product-price">₹11,995</p>
+        <div class="product-badges">
+          <span class="badge badge-popular">Popular</span>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Saree Card 3 -->
+    <div class="product-card">
+      <img src="{{ '/images/saree3.jpg' | url }}" alt="Traditional Cotton Saree" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Traditional Cotton Saree</h3>
+        <p class="product-price">₹4,995</p>
+        <div class="product-badges">
+          <span class="badge badge-sale">Sale</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kurthi Card -->
+    <div class="product-card">
+      <img src="{{ '/images/kurthi.jpg' | url }}" alt="Stylish Kurthi" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Stylish Kurthi with Comfortable Fabric</h3>
+        <p class="product-price">₹2,995</p>
+        <div class="product-badges">
+          <span class="badge badge-trending">Trending</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nightie Card -->
+    <div class="product-card">
+      <img src="{{ '/images/leggings.jpg' | url }}" alt="Comfortable Nightie" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Comfortable Cotton Nightie</h3>
+        <p class="product-price">₹1,995</p>
+        <div class="product-badges">
+          <span class="badge badge-bestseller">Best Seller</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leggings Card -->
+    <div class="product-card">
+      <img src="{{ '/images/leggings.jpg' | url }}" alt="Stylish Leggings" class="product-image">
+      <div class="product-info">
+        <h3 class="product-title">Stylish Comfortable Leggings</h3>
+        <p class="product-price">₹1,495</p>
+        <div class="product-badges">
+          <span class="badge badge-value">Value</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-cta">
+    <a href="/saree/" class="btn-primary">
+      <i class="fas fa-eye"></i>
+      View All Products
+    </a>
+  </div>
+</section>
+
+<!-- CATEGORIES SECTION -->
+<section class="categories-section">
+  <div class="section-header">
+    <h2>Shop by Category</h2>
+    <p>Explore our diverse collection of women's wear</p>
+  </div>
+  
+  <div class="categories-grid">
+    <div class="category-card">
+      <div class="category-icon">
+        <i class="fas fa-scarf"></i>
+      </div>
+      <h3>Sarees</h3>
+      <p>Traditional and designer sarees for every occasion</p>
+      <a href="/saree/" class="category-link">
+        <i class="fas fa-arrow-right"></i>
+        Explore Sarees
+      </a>
+    </div>
+    
+    <div class="category-card">
+      <div class="category-icon">
+        <i class="fas fa-tshirt"></i>
+      </div>
+      <h3>Kurthis</h3>
+      <p>Modern kurthis with traditional elegance</p>
+      <a href="/kurthi/" class="category-link">
+        <i class="fas fa-arrow-right"></i>
+        Explore Kurthis
+      </a>
+    </div>
+    
+    <div class="category-card">
+      <div class="category-icon">
+        <i class="fas fa-moon"></i>
+      </div>
+      <h3>Nighties</h3>
+      <p>Comfortable nightwear for peaceful sleep</p>
+      <a href="/nighties/" class="category-link">
+        <i class="fas fa-arrow-right"></i>
+        Explore Nighties
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-content">
+    <h2>About Rithikha Fashion</h2>
+    <p>Rithikha Fashion is Sangagiri's one-stop destination for elegant, affordable women's wear—from designer sarees to everyday essentials. We believe in bringing you the finest collection with quality and style that makes every woman feel beautiful and confident.</p>
+    
+    <div class="about-features">
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3>Elegant Collection</h3>
+        <p>Handpicked designs that blend tradition with contemporary style, ensuring every piece tells a story of elegance and sophistication.</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-tags"></i>
+        </div>
+        <h3>Affordable Luxury</h3>
+        <p>Quality fashion at prices that make style accessible to everyone. We believe luxury should be within reach of every woman.</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Local Heritage</h3>
+        <p>Proudly serving Sangagiri with the finest women's wear, maintaining the rich cultural heritage of our region.</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
+        <h3>Quality Assurance</h3>
+        <p>Every piece is carefully selected and quality-checked to ensure you receive only the best products.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section">
+  <div class="section-header">
+    <h2>What Our Customers Say</h2>
+    <p>Real experiences from our valued customers</p>
+  </div>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <i class="fas fa-quote-left"></i>
+        <p>"The saree I bought from Rithikha Fashion is absolutely stunning! The quality is exceptional and the price was very reasonable."</p>
+      </div>
+      <div class="testimonial-author">
+        <div class="author-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="author-info">
+          <h4>Priya S.</h4>
+          <span>Regular Customer</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <i class="fas fa-quote-left"></i>
+        <p>"Best place for women's wear in Sangagiri! Their kurthi collection is trendy and comfortable. Highly recommended!"</p>
+      </div>
+      <div class="testimonial-author">
+        <div class="author-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="author-info">
+          <h4>Lakshmi R.</h4>
+          <span>Happy Customer</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <i class="fas fa-quote-left"></i>
+        <p>"The nighties are so comfortable and the fabric quality is amazing. Perfect for daily wear and great value for money."</p>
+      </div>
+      <div class="testimonial-author">
+        <div class="author-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="author-info">
+          <h4>Meena K.</h4>
+          <span>Satisfied Customer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
